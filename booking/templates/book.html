@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+<!-- MAIN CONTENT -->
+<div class="card border-info mb-3 w-75">
+   <h5 class="card-header bg-transparent border-success">
+    Book Appointment
+  </h5>
+  <div class="card-body">
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Book Now" %}
+</form>
+ </div>
+ </br>
+{% endblock %}
